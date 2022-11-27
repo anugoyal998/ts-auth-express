@@ -5,7 +5,7 @@ const { JWT_ACCESS_SECRET } = ENV
 class Jwt {
     static EXPIRY = "1d"
     static createToken(payload: any, expiry: string = '1h', secret = JWT_ACCESS_SECRET): string{
-        return jwt.sign(payload, secret, { expiresIn: expiry})
+        return jwt.sign({...payload, createdAt: Date.now()}, secret, { expiresIn: expiry})
     }
     static async verifyToken(token: string, secret: string = JWT_ACCESS_SECRET){
         let decoded;
