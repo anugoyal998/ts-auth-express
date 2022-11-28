@@ -1,6 +1,6 @@
 {
   "name": "ts-auth-express",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A library for authentication with express",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
